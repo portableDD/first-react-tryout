@@ -7,14 +7,15 @@ function Amination() {
         let i;
         let slides = document.getElementsByClassName("slide-show");
         for (i = 0; i < slides.length; i++) {
-            slides[i].style = {display: "none"};  
+            slides[i].style = {display: "none"}; 
         }
         slideIndex++;
         if (slideIndex > slides.length) {
             slideIndex = 1
-        }  
+        }   
         slides[slideIndex-1].style = {display: "flex"};
-        setTimeout(showSlides, 10000); // Change image every 2 seconds
+        setTimeout(showSlides, 2000);// Change image every 2 seconds
+        
     }
     return (
       <div className="slide-show-container">
@@ -67,7 +68,12 @@ function Amination() {
 				</div>
 
 				<div className="slide-show slide-4" style={{display: "flex"}}>
-					<img className="slide-img-background" src="animi pics/slide 4/slide-background4.jpg" alt="banner"/>
+                    <img 
+                        className="slide-img-background" 
+                        src="animi pics/slide 4/slide-background4.jpg" 
+                        alt="banner"
+                    />
+
 				</div>
 			</div>
     )
