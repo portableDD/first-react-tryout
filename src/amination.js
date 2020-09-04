@@ -4,18 +4,21 @@ function Amination() {
     let slideIndex = 0;
     showSlides();
     function showSlides() {
+        debugger
         let i;
         let slides = document.getElementsByClassName("slide-show");
+      
         for (i = 0; i < slides.length; i++) {
-            slides[i].style = {display: "none"}; 
+            if (slideIndex < slides.length) {
+                slides[i].style = {display: "none"}; 
+            }  else if (slideIndex > slides.length){
+                slideIndex = 1;
+                slideIndex++;
+                slides[slideIndex-1].style = {display: "flex"}; 
+            }
+           
         }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }   
-        slides[slideIndex-1].style = {display: "flex"};
-        setTimeout(showSlides, 2000);// Change image every 2 seconds
-        
+        setTimeout(showSlides, 3000);// Change image every 2 seconds
     }
     return (
       <div className="slide-show-container">
