@@ -16,9 +16,9 @@ function Amination() {
                 slideIndex++;
                 slides[slideIndex-1].style = {display: "flex"}; 
             }
-           
+           setTimeout(showSlides, 3000);// Change image every 2 seconds
         }
-        setTimeout(showSlides, 3000);// Change image every 2 seconds
+        
     }
     return (
       <div className="slide-show-container">
