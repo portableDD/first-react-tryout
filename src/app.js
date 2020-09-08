@@ -2,24 +2,30 @@ import React from "react";
 import Header from "./header"
 import Amination from "./amination"
 import "./oni.css"
+import "./app.css"
 
 class App extends React.Component {
-    slideIndex = 0;
-    showSlides();
+    constructor () {
+         super()
+         this.state = {
+            slideIndex: 0
+        }
+    }
     showSlides() {
-        debugger
         let i;
         let slides = document.getElementsByClassName("slide-show");
       
         for (i = 0; i < slides.length; i++) {
-            if (slideIndex < slides.length) {
+            if (this.state.slideIndex < slides.length) {
                 slides[i].style = {display: "none"}; 
-            }  else if (slideIndex > slides.length){
-                slideIndex = 1;
-                slideIndex++;
-                slides[slideIndex-1].style = {display: "flex"}; 
+            }  else if (this.state.slideIndex > slides.length){
+                this.setState({ slideIndex : 1 })
+                this.setState((prevState) => ({
+                    slideIndex: prevState.slideIndex + 1
+                })); 
+                slides[this.state.slideIndex-1].style = {display: "flex"}; 
             }
-           setTimeout(showSlides, 3000);// Change image every 2 seconds
+           setTimeout(this.showSlides(), 3000);// Change image every 2 seconds
         }
         
     }
