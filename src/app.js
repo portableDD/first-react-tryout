@@ -1,6 +1,9 @@
 import React from "react";
+// import Oni from "./oni"
 import Header from "./header"
 import Amination from "./amination"
+// import Data from "./data"
+import  Format from "./format"
 import "./oni.css"
 import "./app.css"
 
@@ -34,6 +37,8 @@ class App extends React.Component {
                 <div>
                 <Header />
                 <Amination />
+                {/* <Data /> */}
+                <Format />
                 </div>
             )
         }

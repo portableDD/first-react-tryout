@@ -1,4 +1,4 @@
-let toggleMenu= document.querySelector(".toggle-menu");
+let toggleMenu= document.getElementsByClassName(".toggle-menu");
 let hideToggleMenu= document.querySelector(".hide-toggle-menu");
 let navMenu = document.querySelector(".site-menu");
 let sideMenu = document.querySelector(".side-menu")

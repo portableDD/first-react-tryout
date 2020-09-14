@@ -12,10 +12,10 @@ function Header() {
                 </div>
                 <nav className="site-menu">
                     
-                    <i className= "search">
+                    <form className= "search">
                         <input type="text" id= "try" value="search"/>
                         <button>Submit</button>
-                    </i>
+                    </form>
 
                     <ul>
                         <li><a href ="index.html">Home</a></li>
