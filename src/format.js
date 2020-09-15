@@ -1,5 +1,6 @@
 import React, { Component} from "react"
 import data from "./data"
+import parse from 'html-react-parser';
 
 
 class Format extends Component{
@@ -9,7 +10,6 @@ class Format extends Component{
         this.state = {
           data  : data
         }
-        
     }
 
 FormatItem() {
@@ -43,13 +43,13 @@ FormatItem() {
     }
     for ( let i = 0; i < this.state.data.length; i++) {
         items += `<div className ="items">
-            <a href= "product.html?name=${this.state.data[i].name}">
+        <a href= "product.html?name=${this.state.data[i].name}">
                 <div className= "featured-image">
                     <img src= "${this.state.data[i].image}"/>
                 </div>
                 <div className = "info">
                     <span>${this.state.data[i].name}</span>
-                    <span>&#8358 ${this.state.data[i].price}</span>
+                    <span>\u20A6 ${this.state.data[i].price}</span>
                 </div>
             </a>
     </div>`
@@ -59,12 +59,15 @@ FormatItem() {
 }
 
     render() {
+
         return (
-            <div dangerouslySetInnerHTML={{
-                __html: htmlString
-               }}>
-                {this.FormatItem}
-                
+             <div className = "index-page hide-toggle-menu">
+                <div className= "latest-title title">
+                    <h3>LATEST</h3>
+                </div>
+                <div className= "latest-product product-wrapper">
+                    {parse(this.FormatItem())}
+                </div>
             </div>
         )
     }

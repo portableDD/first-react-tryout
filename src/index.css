@@ -1,0 +1,83 @@
+.index-page .product-wrapper .items {
+	width: calc(24% - 10px);
+	max-width: unset;
+}
+    
+.index-page {
+    align-items: flex-start;
+    margin: 15px auto 0px auto;
+    padding: 0px 15px;
+    max-width: 800px;
+}
+.index-page .title {
+    margin-bottom: 15px;
+}
+.index-page .title h3 {
+    display: inline-block;
+    padding: 8px;
+    background: #fff;
+    color: #5d5b5b;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px -5px #5d5b5b;
+}
+.index-page .product-wrapper {
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+.index-page .product-wrapper .items {
+    margin-bottom: 15px;
+    background: #fff;
+    padding-bottom: 8px;
+    box-shadow: 0px 0px 10px -3px #ccc;
+    overflow: hidden;
+}
+.product-wrapper .featured-image, .related-products .featured-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    padding: 8px;
+    overflow: hidden;
+}
+.index-page .product-wrapper .items a {
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+.index-page .product-wrapper .items a:active, .index-page .product-wrapper .items a:active, .index-page .product-wrapper .items a::selection {
+    background: transparent;
+}
+.index-page .product-wrapper .items  img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    transition: all 0.4s ease-in-out;
+}
+.index-page .product-wrapper .items:hover img {
+    transform: scale(1.2);
+}
+.index-page .product-wrapper .items .info {
+    background: #f2f2f2;
+    padding: 2px;
+}
+.index-page .product-wrapper .items .info span {
+    display: block;
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    word-spacing: 1px;
+}
+.index-page .product-wrapper .items .info span:first-child {
+    text-transform: capitalize;
+    font-size: 13px;
+}
+.index-page .product-wrapper .items .info span:last-child {
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 600;
+}
