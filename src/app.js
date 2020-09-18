@@ -1,11 +1,9 @@
-import React from "react";
-// import Oni from "./oni"
+import React from "react"
 import Header from "./header"
 import Amination from "./amination"
-import  Format from "./format"
-import "./index.css"
-import "./app.css"
+import  Detail from "./detail"
 import "./oni.css"
+// import "./app.css"
 
 class App extends React.Component {
     constructor () {
@@ -37,11 +35,11 @@ class App extends React.Component {
                 <div>
                 <Header />
                 <Amination />
-                {/* <Data /> */}
-                <Format />
+                <Detail />
                 </div>
             )
-        }
+        }      
 }
+
 
 export default App
