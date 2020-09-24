@@ -18,12 +18,12 @@ function Header() {
                     </form>
 
                     <ul>
-                        <li><a href ="index.html">Home</a></li>
-                        <li><a href ="shoes.html">Shoes</a></li>
-                        <li><a href ="sandal.html">Sandals</a></li>
-                        <li><a href ="slipper.html">Slippers</a></li>
-                        <li><a href ="contact.html">Contact Us </a></li>
-                        <li><a href ="about.html">About Us</a></li>
+                        <li><a href ="public/index.html">Home</a></li>
+                        <li><a href ="public/shoes.html">Shoes</a></li>
+                        <li><a href ="public/sandal.html">Sandals</a></li>
+                        <li><a href ="public/slipper.html">Slippers</a></li>
+                        <li><a href ="public/contact.html">Contact Us </a></li>
+                        <li><a href ="public/about.html">About Us</a></li>
                     </ul>
 
                 </nav>

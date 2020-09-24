@@ -1,12 +1,11 @@
 import React, { useState} from "react"
 import  ReactDom from "react-dom"
 import Data from "./data"
-import FormatItem from "./format"
-import parse from 'html-react-parser';
+
+
 
 function Detail() {
         const [data]= useState(Data);
-        const [format] = useState(FormatItem)
         const urlParams = new URLSearchParams(window.location.search);
         const param = urlParams.get('name');
         const productItems = document.getElementsByClassName('products-items')

@@ -1,9 +1,10 @@
 import React from "react"
 import Header from "./header"
 import Amination from "./amination"
-import  Detail from "./detail"
+// import Oni from "./oni"
+import Format from "./format"
 import "./oni.css"
-// import "./app.css"
+
 
 class App extends React.Component {
     constructor () {
@@ -35,7 +36,7 @@ class App extends React.Component {
                 <div>
                 <Header />
                 <Amination />
-                <Detail />
+                <Format />
                 </div>
             )
         }      
